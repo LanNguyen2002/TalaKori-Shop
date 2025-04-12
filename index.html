@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALASHOP - ĐẶC SẢN BÌNH ĐỊNH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .floating-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .floating-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .floating-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; background-color: #f4a261; padding: 20px;">
+            <img src="logo.png" alt="TalaShop Logo" style="width: 150px; height: 150px; border: none;">
+            <h1 style="text-align: center; color: white; font-size: 36px; margin: 0;">TalaShop - ĐẶC SẢN BÌNH ĐỊNH</h1>
+        </div>
+        <nav style="text-align: center; margin-top: 10px;">
+            <ul style="list-style: none; padding: 0; display: inline-flex; gap: 20px;">
+                <li><a href="#products" style="text-decoration: none; color: white; font-size: 18px;">Sản phẩm</a></li>
+                <li><a href="#about" style="text-decoration: none; color: white; font-size: 18px;">Giới thiệu</a></li>
+                <li><a href="#contact" style="text-decoration: none; color: white; font-size: 18px;">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2 style="text-align: center;">Sản phẩm của shop</h2>
+            <div class="product-grid">
+                <!-- Sản phẩm minh họa -->
+                <div class="product-card">
+                    <img src="dried-fish.jpg" alt="Cá khô">
+                    <h3>Cá khô</h3>
+                    <p>Cá khô chất lượng cao, đậm đà hương vị biển.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-fish.jpg" alt="Mắm cá">
+                    <h3>Mắm cá</h3>
+                    <p>Mắm cá truyền thống, thơm ngon, chuẩn vị quê hương.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="dried-squid.jpg" alt="Mực khô">
+                    <h3>Mực khô</h3>
+                    <p>Các loại mực khô chính gốc, chất lượng cao.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-squid.jpg" alt="Mắm mực">
+                    <h3>Mắm mực</h3>
+                    <p>Mắm mực truyền thống của người dân Bình Định.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-shrimp.jpg" alt="Mắm ruốc">
+                    <h3>Mắm ruốc</h3>
+                    <p>Mắm ruốc thơm ngon, chuẩn vị đặc sản Bình Định.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="dried-shrimp.jpg" alt="Ruốc khô">
+                    <h3>Ruốc khô</h3>
+                    <p>Ruốc biển phơi khô, thích hợp làm gỏi, rang mắm.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="banh-cu.jpg" alt="Bánh củ">
+                    <h3>Bánh củ</h3>
+                    <p>Bánh củ thơm ngọt, đặc sản truyền thống của Bình Định.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="cha-ca.jpg" alt="Chả cá Bình Định">
+                    <h3>Chả cá Bình Định</h3>
+                    <p>Chả cá Bình Định dai ngon, đặc sản nổi tiếng Quy Nhơn.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="mam-nhum.jpg" alt="Mắm nhum">
+                    <h3>Mắm nhum</h3>
+                    <p>Mắm nhum quý hiếm, đặc sản độc đáo của vùng biển Mỹ Đức, Mỹ An.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="nem-cho-huyen.jpg" alt="Nem chợ Huyện">
+                    <h3>Nem chợ Huyện</h3>
+                    <p>Nem chợ Huyện - đặc sản Vĩnh Thạnh.</p>
+                    <a href="shop.html" class="buy-button">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <!-- Thêm sản phẩm khác tại đây -->
+            </div>
+        </section>
+        <section id="about">
+            <h2 style="text-align: center;">Giới thiệu về chúng tôi</h2>
+            <p style="text-align: center;">
+                TalaShop chuyên cung cấp các loại hải sản khô và mắm đặc trưng chính gốc của Bình Định như mắm cá nục, cá cơm, mắm mực, mắm ruốc,...
+            </p>
+            <p style="text-align: center;">
+                TalaShop luôn mong muốn chia sẻ hương vị quen thuộc này đến với những người con xa xứ, mang lại cảm giác gần gũi và thân thuộc cho mọi người.
+            </p>
+        </section>
+        <section id="contact">
+            <h2 style="text-align: center;">Liên hệ với chúng tôi</h2>
+            <div style="text-align: center;">
+                <p><img src="phone-icon.png" alt="SĐT" style="width: 20px; vertical-align: middle;"> SĐT: 0358623205</p>
+                <p><img src="facebook-icon.png" alt="Facebook" style="width: 20px; vertical-align: middle;"> Facebook: <a href="https://www.facebook.com/anh5.nguyen?locale=vi_VN" target="_blank">Nguyễn Thành Lan</a></p>
+                <p><img src="zalo-icon.png" alt="Zalo" style="width: 20px; vertical-align: middle;"> Zalo: <a href="https://zalo.me/0358623205" target="_blank">0358623205</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 TalaShop. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+    <div class="floating-icons">
+        <a href="https://zalo.me/0358623205" target="_blank">
+            <img src="zalo-icon.png" alt="Zalo">
+        </a>
+        <a href="https://www.facebook.com/anh5.nguyen?locale=vi_VN" target="_blank">
+            <img src="facebook-icon.png" alt="Facebook">
+        </a>
+    </div>
+</body>
+</html>

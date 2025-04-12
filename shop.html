@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CỬA HÀNG TALASHOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .product-card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .contact-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 350px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .contact-modal h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .contact-modal p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-modal img {
+            width: 20px;
+            height: 20px;
+        }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .modal-overlay.active,
+        .contact-modal.active {
+            display: block;
+        }
+        .close-modal {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+        }
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .floating-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .floating-icons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .floating-icons img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; background-color: #f4a261; padding: 20px;">
+            <img src="logo.png" alt="TalaShop Logo" style="width: 150px; height: 150px; border: none;">
+            <h1 style="text-align: center; color: white; font-size: 36px; margin: 0;">Cửa hàng TalaShop</h1>
+        </div>
+        <nav style="text-align: center; margin-top: 10px;">
+            <ul style="list-style: none; padding: 0; display: inline-flex; gap: 20px;">
+                <li><a href="Index.html" style="text-decoration: none; color: white; font-size: 18px;">Trang chủ</a></li>
+                <li><a href="#products" style="text-decoration: none; color: white; font-size: 18px;">Sản phẩm</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2 style="text-align: center;">Tất cả sản phẩm</h2>
+            <p style="text-align: center; color: red; font-size: 16px; margin-bottom: 20px;">
+                Giá tham khảo, liên hệ người bán để có giá tốt nhất nhé!
+            </p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="dried-fish.jpg" alt="Cá khô">
+                    <h3>Cá khô</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-fish.jpg" alt="Mắm cá">
+                    <h3>Mắm cá</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="dried-squid.jpg" alt="Mực khô">
+                    <h3>Mực khô</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-squid.jpg" alt="Mắm mực">
+                    <h3>Mắm mực</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="fermented-shrimp.jpg" alt="Mắm ruốc">
+                    <h3>Mắm ruốc</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="dried-shrimp.jpg" alt="Ruốc khô">
+                    <h3>Ruốc khô</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="banh-cu.jpg" alt="Bánh củ">
+                    <h3>Bánh củ</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="cha-ca.jpg" alt="Chả cá Bình Định">
+                    <h3>Chả cá Bình Định</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="mam-nhum.jpg" alt="Mắm nhum">
+                    <h3>Mắm nhum</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="nem-cho-huyen.jpg" alt="Nem chợ Huyện">
+                    <h3>Nem chợ Huyện</h3>
+                    <a href="#" class="buy-button" onclick="showContactModal()">
+                        <img src="cart-icon.png" alt="Mua ngay" style="width: 64px; height: 64px;">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="modal-overlay" id="modalOverlay" onclick="closeContactModal()"></div>
+    <div class="contact-modal" id="contactModal">
+        <span class="close-modal" onclick="closeContactModal()">×</span>
+        <h3>Liên hệ</h3>
+        <p><img src="phone-icon.png" alt="SĐT"> SĐT: 0358623205</p>
+        <p><img src="facebook-icon.png" alt="Facebook"> Facebook: <a href="https://www.facebook.com/anh5.nguyen?locale=vi_VN" target="_blank">Nguyễn Thành Lan</a></p>
+        <p><img src="zalo-icon.png" alt="Zalo"> Zalo: <a href="https://zalo.me/0358623205" target="_blank">0358623205</a></p>
+    </div>
+    <div class="floating-icons">
+        <a href="https://zalo.me/0358623205" target="_blank">
+            <img src="zalo-icon.png" alt="Zalo">
+        </a>
+        <a href="https://www.facebook.com/anh5.nguyen?locale=vi_VN" target="_blank">
+            <img src="facebook-icon.png" alt="Facebook">
+        </a>
+    </div>
+    <footer>
+        <p>&copy; 2023 TalaShop. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+    <script>
+        function showContactModal() {
+            document.getElementById('contactModal').classList.add('active');
+            document.getElementById('modalOverlay').classList.add('active');
+        }
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('active');
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

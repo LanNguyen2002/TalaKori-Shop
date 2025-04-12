@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Cá khô",
+        "image": "dried-fish.jpg",
+        "description": "Cá khô chất lượng cao, đậm đà hương vị biển."
+    },
+    {
+        "name": "Mắm cá",
+        "image": "fermented-fish.jpg",
+        "description": "Mắm cá truyền thống, thơm ngon, chuẩn vị quê hương."
+    },
+    {
+        "name": "Mực khô",
+        "image": "dried-squid.jpg",
+        "description": "Các loại mực khô chính gốc, chất lượng cao."
+    },
+    {
+        "name": "Mắm mực",
+        "image": "fermented-squid.jpg",
+        "description": "Mắm mực truyền thống của người dân Bình Định."
+    },
+    {
+        "name": "Mắm ruốc",
+        "image": "fermented-shrimp.jpg",
+        "description": "Mắm ruốc thơm ngon, chuẩn vị đặc sản Bình Định."
+    },
+    {
+        "name": "Ruốc khô",
+        "image": "dried-shrimp.jpg",
+        "description": "Ruốc biển phơi khô, thích hợp làm gỏi, rang mắm."
+    },
+    {
+        "name": "Bánh củ",
+        "image": "banh-cu.jpg",
+        "description": "Bánh củ thơm ngọt, đặc sản truyền thống của Bình Định."
+    },
+    {
+        "name": "Chả cá Bình Định",
+        "image": "cha-ca.jpg",
+        "description": "Chả cá Bình Định dai ngon, đặc sản nổi tiếng Quy Nhơn."
+    },
+    {
+        "name": "Mắm nhum",
+        "image": "mam-nhum.jpg",
+        "description": "Mắm nhum quý hiếm, đặc sản độc đáo của vùng biển Mỹ Đức, Mỹ An."
+    },
+    {
+        "name": "Nem chợ Huyện",
+        "image": "nem-cho-huyen.jpg",
+        "description": "Nem chợ Huyện - đặc sản Vĩnh Thạnh."
+    }
+]
